@@ -99,9 +99,6 @@ class Document_Search {
                 case 'docx':
                 case 'pptx':
                 case 'xlsx':
-                case 'doc':
-                case 'ppt':
-                case 'xls':
                     $Office_Document_Search = new Office_Document_Search($filename);
                     if($Office_Document_Search->searchDocumentForString($string)) {
                         $this->_filesContainingSearchTerm[] = $filename;
@@ -111,7 +108,7 @@ class Document_Search {
                  * If the file format is unrecognised or unsupported
                  */
                 default:
-                    throw new Exception("The file format '{$file_format}' is not supported, how did you slip through?");
+                    //throw new Exception("The file format '{$file_format}' is not supported, how did you slip through?");
                     break;
             }
 
