@@ -38,9 +38,11 @@ class Text_File_Search implements File_SearchInterface {
      */
     private function _searchString($string) {
         $file = fopen($this->_fileName, 'r');
-        $file_contents = fread($file, filesize($this->_fileName));
-        if(stristr($file_contents, $string)) {
-            $this->_stringFound = TRUE;
+        if(filesize($this->_fileName) > 0) {
+            $file_contents = fread($file, filesize($this->_fileName));
+            if(stristr($file_contents, $string)) {
+                $this->_stringFound = TRUE;
+            }
         }
         fclose($file);
         return TRUE;
