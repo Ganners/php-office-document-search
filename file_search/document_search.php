@@ -129,7 +129,7 @@ class Document_Search {
                  * If the file format is unrecognised or unsupported
                  */
                 default:
-                    //throw new Exception("The file format '{$file_format}' is not supported, how did you slip through?");
+                    throw new Exception("The file format '{$file_format}' is not supported, how did you slip through?");
                     break;
             }
 
