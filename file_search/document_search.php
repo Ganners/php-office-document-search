@@ -106,8 +106,20 @@ class Document_Search {
                     }
                     break;
 
+                /**
+                 * The plain text searchable formats
+                 */
                 case 'doc':
+                case 'ppt':
+                case 'xls':
                 case 'txt':
+                case 'md':
+                case 'php':
+                case 'py':
+                case 'sh':
+                case 'html':
+                case 'js':
+                case 'css':
                     $Text_File_Search = new Text_File_Search($filename);
                     if($Text_File_Search->searchFileForString($string)) {
                         $this->_filesContainingSearchTerm[] = $filename;
