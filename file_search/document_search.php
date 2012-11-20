@@ -94,6 +94,7 @@ class Document_Search {
             $file_format = substr(strrchr($filename,'.'),1);
 
             switch($file_format) {
+
                 /**
                  * The office formats which have to be unzipped
                  */
@@ -131,6 +132,7 @@ class Document_Search {
                 default:
                     throw new Exception("The file format '{$file_format}' is not supported, how did you slip through?");
                     break;
+                    
             }
 
         }
