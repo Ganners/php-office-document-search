@@ -2,6 +2,7 @@ PHP File Searcher
 =================
 
 Author: Mark Gannaway
+
 Tested Version of PHP: php 5.3.8
 
 This is a PHP based file searcher that solves the problem of being able to search microsoft office files such as docx, pptx, xlsx dynamically.
