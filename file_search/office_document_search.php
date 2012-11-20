@@ -3,8 +3,9 @@
 namespace File_Search;
 
 use \Exception;
+use \File_Search\File_SearchInterface;
 
-class Office_Document_Search {
+class Office_Document_Search implements File_SearchInterface {
 
     private $_fileName = '';
     private $_stringFoundIn = array();
@@ -26,7 +27,7 @@ class Office_Document_Search {
      * @param  string $string
      * @return bool if matched
      */
-    public function searchDocumentForString($string) {
+    public function searchFileForString($string) {
         $this->_searchFilesInside($string);
         if($this->getNumberOccurances() > 0)
             return TRUE;

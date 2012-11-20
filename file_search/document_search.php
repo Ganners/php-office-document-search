@@ -3,6 +3,7 @@
 namespace File_Search;
 
 use \File_Search\Office_Document_Search;
+use \File_Search\Text_File_Search;
 use \Iterator\WaxRecursiveDirectoryIterator;
 use \Exception;
 use \RecursiveIteratorIterator;
@@ -100,7 +101,15 @@ class Document_Search {
                 case 'pptx':
                 case 'xlsx':
                     $Office_Document_Search = new Office_Document_Search($filename);
-                    if($Office_Document_Search->searchDocumentForString($string)) {
+                    if($Office_Document_Search->searchFileForString($string)) {
+                        $this->_filesContainingSearchTerm[] = $filename;
+                    }
+                    break;
+
+                case 'doc':
+                case 'txt':
+                    $Text_File_Search = new Text_File_Search($filename);
+                    if($Text_File_Search->searchFileForString($string)) {
                         $this->_filesContainingSearchTerm[] = $filename;
                     }
                     break;
