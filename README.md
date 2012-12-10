@@ -15,7 +15,8 @@ To use you must require the loader (it does use the __autoload method, you may n
 
 Look at index.php for an example usage. To use this please create a directory in the same directory as the index file called test_files and put in some test searchable files.
 
-Tags:
-*Search docx files with php
-*Search office files with php
-*Search xls with php
+##Tags:
+
+* Search docx files with php
+* Search office files with php
+* Search xls with php
